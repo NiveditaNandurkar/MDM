@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NiV | New Collection</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-orange-50 font-sans text-slate-900">
+
+  <!-- Header -->
+  <header class="sticky top-0 z-50 border-b border-orange-100 bg-white/95 backdrop-blur">
+    <nav class="mx-auto flex max-w-7xl items-center justify-between px-5 py-4">
+      <a href="#home" class="text-2xl font-black tracking-tight text-slate-900">
+        NiV<span class="text-rose-500">.</span>
+      </a>
+
+      <div class="flex flex-wrap items-center justify-center gap-x-6 gap-y-3 px-4 sm:gap-x-8 md:gap-x-10 lg:gap-x-12">
+  <a href="#home" class="text-sm font-semibold transition hover:text-rose-500">
+    Home
+  </a>
+
+  <a href="#shop" class="text-sm font-semibold transition hover:text-rose-500">
+    Shop
+  </a>
+
+  <a href="#new-arrivals" class="text-sm font-semibold transition hover:text-rose-500">
+    New Arrivals
+  </a>
+
+  <a href="#categories" class="text-sm font-semibold transition hover:text-rose-500">
+    Categories
+  </a>
+
+  <a href="#about" class="text-sm font-semibold transition hover:text-rose-500">
+    About
+  </a>
+
+  <a href="#faq" class="text-sm font-semibold transition hover:text-rose-500">
+    FAQ
+  </a>
+
+  <a href="#contact" class="text-sm font-semibold transition hover:text-rose-500">
+    Contact
+  </a>
+</div>
+      <div class="flex items-center gap-2">
+        <button aria-label="Search" class="rounded-full p-2 hover:bg-orange-100">⌕</button>
+        <button aria-label="Wishlist" class="rounded-full p-2 hover:bg-orange-100">♡</button>
+        <button aria-label="Cart" class="rounded-full p-2 hover:bg-orange-100">🛍️</button>
+        <a href="#shop" class="hidden rounded-full bg-rose-500 px-5 py-2 text-sm font-bold text-white transition hover:bg-rose-600 sm:block">
+          Shop Now
+        </a>
+        <button aria-label="Menu" class="rounded-full p-2 hover:bg-orange-100 lg:hidden">☰</button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section id="home" class="overflow-hidden">
+      <div class="mx-auto flex max-w-7xl flex-col items-center gap-10 px-5 py-16 lg:flex-row lg:py-24">
+        <div class="w-full lg:w-1/2">
+          <p class="mb-4 font-bold uppercase tracking-[0.2em] text-rose-500">Spring / Summer Collection</p>
+          <h1 class="text-5xl font-black leading-tight sm:text-6xl">
+            Style that feels
+            <span class="text-rose-500">like you.</span>
+          </h1>
+          <p class="mt-6 max-w-xl text-lg leading-8 text-slate-600">
+            Discover colorful, comfortable, and modern essentials made for every beautiful moment.
+          </p>
+
+          <div class="mt-8 flex flex-col gap-3 sm:flex-row">
+            <a href="#shop" class="rounded-full bg-slate-900 px-7 py-3 text-center font-bold text-white transition hover:bg-rose-500">
+              Shop Collection
+            </a>
+            <a href="#about" class="rounded-full border-2 border-orange-200 px-7 py-3 text-center font-bold transition hover:border-rose-500 hover:bg-rose-50">
+              Explore More
+            </a>
+          </div>
+
+          <div class="mt-10 flex gap-8">
+            <div><p class="text-2xl font-black">20K+</p><p class="text-sm text-slate-500">Happy Customers</p></div>
+            <div><p class="text-2xl font-black">4.9/5</p><p class="text-sm text-slate-500">Customer Rating</p></div>
+            <div><p class="text-2xl font-black">Free</p><p class="text-sm text-slate-500">Shipping over $75</p></div>
+          </div>
+        </div>
+
+        <div class="w-full lg:w-1/2">
+          <div class="relative h-[430px] overflow-hidden rounded-[2.5rem] bg-rose-200 sm:h-[520px]">
+            <img
+              src="https://images.unsplash.com/photo-1445205170230-053b83016050?auto=format&fit=crop&w=1200&q=85"
+              alt="Fashion clothing collection"
+              class="h-full w-full object-cover"
+            />
+            <div class="absolute bottom-6 left-6 rounded-2xl bg-white/90 px-5 py-4 shadow-lg backdrop-blur">
+              <p class="text-sm text-slate-500">New collection</p>
+              <p class="font-black">Modern pieces, everyday comfort.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Promotion -->
+    <section class="mx-auto max-w-7xl px-5 py-6">
+      <div class="flex flex-col items-center justify-between gap-5 rounded-3xl bg-gradient-to-r from-rose-500 to-orange-400 px-8 py-8 text-white md:flex-row">
+        <div>
+          <p class="text-sm font-bold uppercase tracking-widest text-rose-100">New customer offer</p>
+          <h2 class="mt-1 text-3xl font-black">Get 20% off your first order!</h2>
+        </div>
+        <a href="#contact" class="rounded-full bg-white px-7 py-3 font-bold text-slate-900 transition hover:bg-slate-900 hover:text-white">
+          Claim Offer
+        </a>
+      </div>
+    </section>
+
+    <!-- Shop -->
+    <section id="shop" class="py-16">
+      <div class="mx-auto max-w-7xl px-5">
+        <div class="mb-10 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
+          <div>
+            <p class="font-bold uppercase tracking-[0.2em] text-rose-500">Featured products</p>
+            <h2 class="mt-2 text-4xl font-black">Find your favorites.</h2>
+          </div>
+          <a href="#" class="font-bold text-rose-500 hover:text-rose-600">View all products →</a>
+        </div>
+
+        <div class="flex flex-wrap gap-6">
+          <!-- Product 1 -->
+          <article class="group w-full overflow-hidden rounded-3xl bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-xl sm:w-[calc(50%-0.75rem)] lg:w-[calc(25%-1.125rem)]">
+            <div class="h-64 overflow-hidden bg-rose-100">
+              <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=700&q=85"
+                alt="Classic cotton t-shirt"
+                class="h-full w-full object-cover transition duration-500 group-hover:scale-110">
+            </div>
+            <div class="p-5">
+              <p class="text-xs font-bold uppercase tracking-wider text-slate-400">Essentials</p>
+              <h3 class="mt-1 text-lg font-black">Classic Cotton Tee</h3>
+              <p class="mt-2 text-sm text-amber-500">★★★★★ <span class="text-slate-400">(124)</span></p>
+              <div class="mt-4 flex items-center justify-between">
+                <span class="text-lg font-black text-rose-500">$34.00</span>
+                <button class="rounded-full bg-slate-900 px-4 py-2 text-sm font-bold text-white hover:bg-rose-500">Add</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Product 2 -->
+          <article class="group w-full overflow-hidden rounded-3xl bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-xl sm:w-[calc(50%-0.75rem)] lg:w-[calc(25%-1.125rem)]">
+            <div class="h-64 overflow-hidden bg-orange-100">
+              <img src="https://i.pinimg.com/originals/a4/c6/d2/a4c6d2b3310a1958d0dec995770cb318.jpg"
+                alt="Minimal leather tote bag"
+                class="h-full w-full object-cover transition duration-500 group-hover:scale-110">
+            </div>
+            <div class="p-5">
+              <p class="text-xs font-bold uppercase tracking-wider text-slate-400">Accessories</p>
+              <h3 class="mt-1 text-lg font-black">Minimal Leather Tote</h3>
+              <p class="mt-2 text-sm text-amber-500">★★★★★ <span class="text-slate-400">(89)</span></p>
+              <div class="mt-4 flex items-center justify-between">
+                <span class="text-lg font-black text-rose-500">$118.00</span>
+                <button class="rounded-full bg-slate-900 px-4 py-2 text-sm font-bold text-white hover:bg-rose-500">Add</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Product 3 -->
+          <article class="group w-full overflow-hidden rounded-3xl bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-xl sm:w-[calc(50%-0.75rem)] lg:w-[calc(25%-1.125rem)]">
+            <div class="h-64 overflow-hidden bg-sky-100">
+              <img src="https://i.pinimg.com/736x/4a/34/4b/4a344b0daf661c8fca4ac24708acfb94.jpg"
+                alt="White low-top sneakers"
+                class="h-full w-full object-cover transition duration-500 group-hover:scale-110">
+            </div>
+            <div class="p-5">
+              <p class="text-xs font-bold uppercase tracking-wider text-slate-400">Footwear</p>
+              <h3 class="mt-1 text-lg font-black">Cloud Runner Sneakers</h3>
+              <p class="mt-2 text-sm text-amber-500">★★★★★ <span class="text-slate-400">(206)</span></p>
+              <div class="mt-4 flex items-center justify-between">
+                <span class="text-lg font-black text-rose-500">$92.00</span>
+                <button class="rounded-full bg-slate-900 px-4 py-2 text-sm font-bold text-white hover:bg-rose-500">Add</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Product 4 -->
+          <article class="group w-full overflow-hidden rounded-3xl bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-xl sm:w-[calc(50%-0.75rem)] lg:w-[calc(25%-1.125rem)]">
+            <div class="h-64 overflow-hidden bg-violet-100">
+              <img src="https://images.unsplash.com/photo-1524805444758-089113d48a6d?auto=format&fit=crop&w=700&q=85"
+                alt="Minimal steel wrist watch"
+                class="h-full w-full object-cover transition duration-500 group-hover:scale-110">
+            </div>
+            <div class="p-5">
+              <p class="text-xs font-bold uppercase tracking-wider text-slate-400">Accessories</p>
+              <h3 class="mt-1 text-lg font-black">Minimal Steel Watch</h3>
+              <p class="mt-2 text-sm text-amber-500">★★★★★ <span class="text-slate-400">(157)</span></p>
+              <div class="mt-4 flex items-center justify-between">
+                <span class="text-lg font-black text-rose-500">$145.00</span>
+                <button class="rounded-full bg-slate-900 px-4 py-2 text-sm font-bold text-white hover:bg-rose-500">Add</button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+    <!-- New Arrivals -->
+<section id="new-arrivals" class="bg-gradient-to-br from-rose-50 via-orange-50 to-amber-50 py-16">
+  <div class="mx-auto max-w-7xl px-5">
+    <div class="mb-10 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
+      <div>
+        <p class="font-bold uppercase tracking-[0.2em] text-rose-500">Just dropped</p>
+        <h2 class="mt-2 text-4xl font-black">New arrivals</h2>
+        <p class="mt-2 text-slate-600">Fresh styles, limited pieces, and special prices.</p>
+      </div>
+
+      <a href="#shop" class="font-bold text-rose-500 hover:text-rose-600">
+        Explore all arrivals →
+      </a>
+    </div>
+
+    <div class="flex flex-wrap gap-6">
+      <!-- Sale Product 1 -->
+      <article class="group relative w-full overflow-hidden rounded-3xl bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-xl sm:w-[calc(50%-0.75rem)] lg:w-[calc(25%-1.125rem)]">
+        <span class="absolute left-4 top-4 z-10 rounded-full bg-rose-500 px-4 py-1 text-xs font-black text-white shadow-lg">
+          SALE -30%
+        </span>
+
+        <div class="h-64 overflow-hidden bg-pink-100">
+          <img
+            src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=700&q=85"
+            alt="Pink casual jacket"
+            class="h-full w-full object-cover transition duration-500 group-hover:scale-110"
+          />
+        </div>
+
+        <div class="p-5">
+          <p class="text-xs font-bold uppercase tracking-wider text-slate-400">New clothing</p>
+          <h3 class="mt-1 text-lg font-black">Soft Casual Jacket</h3>
+          <div class="mt-4 flex items-center gap-2">
+            <span class="text-lg font-black text-rose-500">$49.00</span>
+            <span class="text-sm text-slate-400 line-through">$70.00</span>
+          </div>
+          <button class="mt-4 w-full rounded-full bg-slate-900 py-2 font-bold text-white transition hover:bg-rose-500">
+            Add to Cart
+          </button>
+        </div>
+      </article>
+
+      <!-- Sale Product 2 -->
+      <article class="group relative w-full overflow-hidden rounded-3xl bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-xl sm:w-[calc(50%-0.75rem)] lg:w-[calc(25%-1.125rem)]">
+        <span class="absolute left-4 top-4 z-10 rounded-full bg-orange-500 px-4 py-1 text-xs font-black text-white shadow-lg">
+          SALE -25%
+        </span>
+
+        <div class="h-64 overflow-hidden bg-orange-100">
+          <img
+            src="https://i.pinimg.com/originals/a4/c6/d2/a4c6d2b3310a1958d0dec995770cb318.jpg"
+            alt="Stylish leather tote bag"
+            class="h-full w-full object-cover transition duration-500 group-hover:scale-110"
+          />
+        </div>
+
+        <div class="p-5">
+          <p class="text-xs font-bold uppercase tracking-wider text-slate-400">New bags</p>
+          <h3 class="mt-1 text-lg font-black">Everyday Tote Bag</h3>
+          <div class="mt-4 flex items-center gap-2">
+            <span class="text-lg font-black text-rose-500">$89.00</span>
+            <span class="text-sm text-slate-400 line-through">$119.00</span>
+          </div>
+          <button class="mt-4 w-full rounded-full bg-slate-900 py-2 font-bold text-white transition hover:bg-rose-500">
+            Add to Cart
+          </button>
+        </div>
+      </article>
+
+      <!-- Sale Product 3 -->
+      <article class="group relative w-full overflow-hidden rounded-3xl bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-xl sm:w-[calc(50%-0.75rem)] lg:w-[calc(25%-1.125rem)]">
+        <span class="absolute left-4 top-4 z-10 rounded-full bg-violet-500 px-4 py-1 text-xs font-black text-white shadow-lg">
+          SALE -40%
+        </span>
+
+        <div class="h-64 overflow-hidden bg-violet-100">
+          <img
+            src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=700&q=85"
+            alt="Modern wrist watch"
+            class="h-full w-full object-cover transition duration-500 group-hover:scale-110"
+          />
+        </div>
+
+        <div class="p-5">
+          <p class="text-xs font-bold uppercase tracking-wider text-slate-400">New accessories</p>
+          <h3 class="mt-1 text-lg font-black">Rose Gold Watch</h3>
+          <div class="mt-4 flex items-center gap-2">
+            <span class="text-lg font-black text-rose-500">$75.00</span>
+            <span class="text-sm text-slate-400 line-through">$125.00</span>
+          </div>
+          <button class="mt-4 w-full rounded-full bg-slate-900 py-2 font-bold text-white transition hover:bg-rose-500">
+            Add to Cart
+          </button>
+        </div>
+      </article>
+
+      <!-- Sale Product 4 -->
+      <article class="group relative w-full overflow-hidden rounded-3xl bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-xl sm:w-[calc(50%-0.75rem)] lg:w-[calc(25%-1.125rem)]">
+        <span class="absolute left-4 top-4 z-10 rounded-full bg-sky-500 px-4 py-1 text-xs font-black text-white shadow-lg">
+          SALE -20%
+        </span>
+
+        <div class="h-64 overflow-hidden bg-sky-100">
+          <img
+            src="https://i.pinimg.com/736x/4a/34/4b/4a344b0daf661c8fca4ac24708acfb94.jpg"
+            alt="White stylish sneakers"
+            class="h-full w-full object-cover transition duration-500 group-hover:scale-110"
+          />
+        </div>
+
+        <div class="p-5">
+          <p class="text-xs font-bold uppercase tracking-wider text-slate-400">New footwear</p>
+          <h3 class="mt-1 text-lg font-black">Urban White Sneakers</h3>
+          <div class="mt-4 flex items-center gap-2">
+            <span class="text-lg font-black text-rose-500">$64.00</span>
+            <span class="text-sm text-slate-400 line-through">$80.00</span>
+          </div>
+          <button class="mt-4 w-full rounded-full bg-slate-900 py-2 font-bold text-white transition hover:bg-rose-500">
+            Add to Cart
+          </button>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+    <!-- Categories -->
+<!-- Categories -->
+<section id="categories" class="bg-white py-16">
+  <div class="mx-auto max-w-7xl px-5">
+    <div class="text-center">
+      <p class="font-bold uppercase tracking-[0.2em] text-rose-500">Explore more</p>
+      <h2 class="mt-2 text-4xl font-black">Shop by category</h2>
+      <p class="mt-3 text-slate-600">Find something special for every style.</p>
+    </div>
+
+    <div class="mt-10 flex flex-col gap-6 sm:flex-row sm:flex-wrap">
+      <!-- Clothing -->
+      <a href="#shop" class="group relative h-72 w-full overflow-hidden rounded-3xl sm:w-[calc(50%-0.75rem)] lg:w-[calc(25%-1.125rem)]">
+<!-- Clothing -->
+<img
+  src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=700&q=85"
+  alt="Fashion clothing collection"
+  class="h-full w-full object-cover transition duration-500 group-hover:scale-110"
+/>       
+ <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-950/10 to-transparent"></div>
+        <div class="absolute bottom-0 w-full p-6 text-white">
+          <p class="text-3xl"></p>
+          <h3 class="mt-2 text-2xl font-black">Clothing</h3>
+          <p class="mt-1 text-sm text-white/80">Fresh everyday styles →</p>
+        </div>
+      </a>
+
+      <!-- Bags Pinterest image -->
+      <a href="#shop" class="group relative h-72 w-full overflow-hidden rounded-3xl sm:w-[calc(50%-0.75rem)] lg:w-[calc(25%-1.125rem)]">
+<!-- Bags -->
+<img
+  src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=700&q=85"
+  alt="Leather bags collection"
+  class="h-full w-full object-cover transition duration-500 group-hover:scale-110"
+/>
+        <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-950/10 to-transparent"></div>
+        <div class="absolute bottom-0 w-full p-6 text-white">
+          <p class="text-3xl"></p>
+          <h3 class="mt-2 text-2xl font-black">Bags</h3>
+          <p class="mt-1 text-sm text-white/80">Carry your essentials →</p>
+        </div>
+      </a>
+
+      <!-- Shoes Pinterest image -->
+      <a href="#shop" class="group relative h-72 w-full overflow-hidden rounded-3xl sm:w-[calc(50%-0.75rem)] lg:w-[calc(25%-1.125rem)]">
+        <!-- Shoes -->
+<img
+  src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=700&q=85"
+  alt="Red sneaker collection"
+  class="h-full w-full object-cover transition duration-500 group-hover:scale-110"
+/>
+        <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-950/10 to-transparent"></div>
+        <div class="absolute bottom-0 w-full p-6 text-white">
+          <p class="text-3xl"></p>
+          <h3 class="mt-2 text-2xl font-black">Shoes</h3>
+          <p class="mt-1 text-sm text-white/80">Walk in confidence →</p>
+        </div>
+      </a>
+
+      <!-- Accessories -->
+      <a href="#shop" class="group relative h-72 w-full overflow-hidden rounded-3xl sm:w-[calc(50%-0.75rem)] lg:w-[calc(25%-1.125rem)]">
+<!-- Watches and accessories -->
+<img
+  src="https://images.unsplash.com/photo-1523170335258-f5ed11844a49?auto=format&fit=crop&w=700&q=85"
+  alt="Luxury watch collection"
+  class="h-full w-full object-cover transition duration-500 group-hover:scale-110"
+/>
+        <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-950/10 to-transparent"></div>
+        <div class="absolute bottom-0 w-full p-6 text-white">
+          <p class="text-3xl"></p>
+          <h3 class="mt-2 text-2xl font-black">Accessories</h3>
+          <p class="mt-1 text-sm text-white/80">Complete your look →</p>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+    <!-- About -->
+    <section id="about" class="py-16">
+      <div class="mx-auto max-w-4xl px-5 text-center">
+        <p class="font-bold uppercase tracking-[0.2em] text-rose-500">About Nova</p>
+        <h2 class="mt-3 text-4xl font-black">Everyday style, made joyful.</h2>
+        <p class="mt-5 text-lg leading-8 text-slate-600">
+          NiV brings together thoughtful, modern products that make everyday life feel a little brighter.
+        </p>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="bg-white py-16">
+      <div class="mx-auto max-w-3xl px-5">
+        <p class="text-center font-bold uppercase tracking-[0.2em] text-rose-500">Need help?</p>
+        <h2 class="mt-2 text-center text-4xl font-black">Frequently asked questions</h2>
+
+        <div class="mt-10 space-y-4">
+          <details class="rounded-2xl border border-orange-100 bg-orange-50 p-5">
+            <summary class="cursor-pointer font-bold">How long does shipping take?</summary>
+            <p class="mt-3 text-slate-600">Orders are usually delivered within 3–7 business days.</p>
+          </details>
+          <details class="rounded-2xl border border-rose-100 bg-rose-50 p-5">
+            <summary class="cursor-pointer font-bold">Can I return an item?</summary>
+            <p class="mt-3 text-slate-600">Yes. We offer easy returns within 30 days of delivery.</p>
+          </details>
+          <details class="rounded-2xl border border-sky-100 bg-sky-50 p-5">
+            <summary class="cursor-pointer font-bold">How can I track my order?</summary>
+            <p class="mt-3 text-slate-600">A tracking link will be emailed after your order ships.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="bg-slate-900 py-16 text-white">
+      <div class="mx-auto max-w-3xl px-5 text-center">
+        <p class="font-bold uppercase tracking-[0.2em] text-rose-400">Stay connected</p>
+        <h2 class="mt-2 text-4xl font-black">Get new arrivals in your inbox.</h2>
+        <p class="mt-4 text-slate-300">Join the NiV community for special offers and style updates.</p>
+
+        <form class="mt-8 flex flex-col gap-3 sm:flex-row">
+          <label for="email" class="sr-only">Email address</label>
+          <input id="email" type="email" placeholder="Enter your email address"
+            class="w-full rounded-full px-5 py-3 text-slate-900 outline-none ring-2 ring-transparent focus:ring-rose-400">
+          <button type="submit" class="rounded-full bg-rose-500 px-7 py-3 font-bold transition hover:bg-rose-600">
+            Subscribe
+          </button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- Cute Pet Assistant -->
+  <div class="fixed bottom-5 right-5 z-50 flex items-end gap-2">
+    <div class="rounded-2xl rounded-br-none bg-white px-4 py-3 text-sm font-bold text-slate-700 shadow-xl">
+      🐶 I’m searching cute finds for you!
+    </div>
+    <div class="animate-bounce rounded-full bg-amber-300 p-4 text-3xl shadow-xl">
+      🐶
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-slate-950 px-5 py-8 text-center text-sm text-slate-400">
+    <p class="text-xl font-black text-white">NOVA<span class="text-rose-500">.</span></p>
+    <div class="mt-4 flex flex-wrap justify-center gap-5">
+      <a href="#home" class="hover:text-white">Home</a>
+      <a href="#shop" class="hover:text-white">Shop</a>
+      <a href="#faq" class="hover:text-white">FAQ</a>
+      <a href="#contact" class="hover:text-white">Contact</a>
+    </div>
+    <p class="mt-5">© 2026 NOVA Store. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
