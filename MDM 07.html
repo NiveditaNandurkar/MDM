@@ -1,0 +1,170 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College FAQ Portal</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f5f9;
+            margin: 0;
+            padding: 40px;
+        }
+
+        .container {
+            max-width: 700px;
+            margin: auto;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        .faq {
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            overflow: hidden;
+        }
+
+        .question {
+            width: 100%;
+            padding: 18px;
+            text-align: left;
+            border: none;
+            background-color: #4f46e5;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+
+            /* For text and arrow */
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .question:hover {
+            background-color: #3730a3;
+        }
+
+        .arrow {
+            font-size: 18px;
+            transition: transform 0.3s;
+        }
+
+        .answer {
+            display: none;
+            padding: 15px;
+            background-color: #f9fafb;
+            color: #444;
+            line-height: 1.6;
+        }
+
+        .answer.show {
+            display: block;
+        }
+
+        /* Rotate arrow when FAQ is opened */
+        .question.active .arrow {
+            transform: rotate(180deg);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>College Help Portal - FAQ</h1>
+
+        <div class="faq">
+            <button class="question">
+                <span>What are the college admission requirements?</span>
+                <span class="arrow">▼</span>
+            </button>
+
+            <div class="answer">
+                Students must submit the required academic certificates,
+                identity proof, photographs, and admission application form.
+            </div>
+        </div>
+
+        <div class="faq">
+            <button class="question">
+                <span>How can I check my examination timetable?</span>
+                <span class="arrow">▼</span>
+            </button>
+
+            <div class="answer">
+                The examination timetable is available on the college
+                website and student portal.
+            </div>
+        </div>
+
+        <div class="faq">
+            <button class="question">
+                <span>How can I apply for a leave?</span>
+                <span class="arrow">▼</span>
+            </button>
+
+            <div class="answer">
+                Students can apply for leave by submitting a leave
+                application to their department or through the student portal.
+            </div>
+        </div>
+
+        <div class="faq">
+            <button class="question">
+                <span>Where can I find study materials?</span>
+                <span class="arrow">▼</span>
+            </button>
+
+            <div class="answer">
+                Study materials are available through the college LMS,
+                department portal, or respective faculty members.
+            </div>
+        </div>
+
+        <div class="faq">
+            <button class="question">
+                <span>How can I contact the department?</span>
+                <span class="arrow">▼</span>
+            </button>
+
+            <div class="answer">
+                Students can contact the department office during working
+                hours or use the contact details provided on the college website.
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const questions = document.querySelectorAll(".question");
+
+        questions.forEach(function(question) {
+
+            question.addEventListener("click", function() {
+
+                const answer = question.nextElementSibling;
+
+                // Show or hide answer
+                answer.classList.toggle("show");
+
+                // Rotate arrow
+                question.classList.toggle("active");
+
+            });
+
+        });
+    </script>
+
+</body>
+</html>
+```
