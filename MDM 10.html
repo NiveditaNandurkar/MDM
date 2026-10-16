@@ -1,0 +1,224 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smart To-Do List</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="min-h-screen bg-slate-100 text-slate-800">
+
+  <header class="bg-indigo-600 p-5 text-white shadow">
+    <div class="mx-auto max-w-3xl">
+      <h1 class="text-2xl font-bold">Smart To-Do List</h1>
+      <p class="mt-1 text-indigo-100">
+        Organize your day, one task at a time.
+      </p>
+    </div>
+  </header>
+
+  <main class="mx-auto max-w-3xl p-4 sm:p-6">
+
+    <section class="mb-6 grid grid-cols-1 gap-4 sm:grid-cols-3">
+      <div class="rounded-xl bg-white p-4 shadow-sm">
+        <p class="text-sm text-slate-500">Total Tasks</p>
+        <p id="total" class="mt-1 text-3xl font-bold">0</p>
+      </div>
+
+      <div class="rounded-xl bg-white p-4 shadow-sm">
+        <p class="text-sm text-slate-500">Pending</p>
+        <p id="pending" class="mt-1 text-3xl font-bold text-orange-500">0</p>
+      </div>
+
+      <div class="rounded-xl bg-white p-4 shadow-sm">
+        <p class="text-sm text-slate-500">Completed</p>
+        <p id="completed" class="mt-1 text-3xl font-bold text-green-600">0</p>
+      </div>
+    </section>
+
+    <section class="rounded-xl bg-white p-5 shadow-sm">
+      <h2 class="mb-4 text-xl font-semibold">Add a New Task</h2>
+
+      <form id="taskForm" class="flex flex-col gap-3 sm:flex-row">
+        <input
+          id="taskInput"
+          type="text"
+          placeholder="Enter your task..."
+          maxlength="200"
+          required
+          class="min-w-0 flex-1 rounded-lg border border-slate-300 px-4 py-3 outline-none focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200"
+        >
+
+        <button
+          type="submit"
+          class="rounded-lg bg-indigo-600 px-6 py-3 font-medium text-white transition hover:bg-indigo-700"
+        >
+          Add Task
+        </button>
+      </form>
+
+      <div class="mt-6 flex flex-wrap gap-2">
+        <button data-filter="all"
+          class="filter rounded-lg bg-indigo-600 px-4 py-2 text-sm text-white">
+          All
+        </button>
+
+        <button data-filter="pending"
+          class="filter rounded-lg bg-slate-100 px-4 py-2 text-sm hover:bg-slate-200">
+          Pending
+        </button>
+
+        <button data-filter="completed"
+          class="filter rounded-lg bg-slate-100 px-4 py-2 text-sm hover:bg-slate-200">
+          Completed
+        </button>
+      </div>
+
+      <ul id="taskList" class="mt-5 space-y-3"></ul>
+
+      <p id="emptyMessage" class="py-8 text-center text-slate-400">
+        No tasks yet. Add your first task!
+      </p>
+    </section>
+
+    <p class="mt-5 text-center text-sm text-slate-500">
+      Your tasks are saved locally in your browser.
+    </p>
+
+  </main>
+
+  <script>
+    const form = document.getElementById("taskForm");
+    const input = document.getElementById("taskInput");
+    const taskList = document.getElementById("taskList");
+    const emptyMessage = document.getElementById("emptyMessage");
+
+    let tasks = [];
+
+    try {
+      tasks = JSON.parse(localStorage.getItem("smartTasks")) || [];
+      if (!Array.isArray(tasks)) tasks = [];
+    } catch {
+      tasks = [];
+    }
+
+    let currentFilter = "all";
+
+    function saveTasks() {
+      localStorage.setItem("smartTasks", JSON.stringify(tasks));
+    }
+
+    function updateStats() {
+      document.getElementById("total").textContent = tasks.length;
+
+      document.getElementById("pending").textContent =
+        tasks.filter(task => !task.completed).length;
+
+      document.getElementById("completed").textContent =
+        tasks.filter(task => task.completed).length;
+    }
+
+    function renderTasks() {
+      taskList.replaceChildren();
+
+      const filteredTasks = tasks.filter(task => {
+        if (currentFilter === "pending") return !task.completed;
+        if (currentFilter === "completed") return task.completed;
+        return true;
+      });
+
+      emptyMessage.classList.toggle("hidden", filteredTasks.length > 0);
+
+      if (filteredTasks.length === 0) {
+        emptyMessage.textContent = tasks.length === 0
+          ? "No tasks yet. Add your first task!"
+          : "No tasks found in this category.";
+      }
+
+      filteredTasks.forEach(task => {
+        const li = document.createElement("li");
+        li.className =
+          "flex items-center gap-3 rounded-lg border border-slate-200 p-3";
+
+        const checkbox = document.createElement("input");
+        checkbox.type = "checkbox";
+        checkbox.checked = task.completed;
+        checkbox.setAttribute("aria-label", "Mark task as completed");
+        checkbox.className =
+          "h-5 w-5 shrink-0 cursor-pointer accent-indigo-600";
+
+        checkbox.addEventListener("change", () => {
+          task.completed = checkbox.checked;
+          saveTasks();
+          renderTasks();
+        });
+
+        const taskText = document.createElement("span");
+        taskText.textContent = task.text;
+        taskText.className = "min-w-0 flex-1 break-words";
+
+        if (task.completed) {
+          taskText.classList.add("text-slate-400", "line-through");
+        }
+
+        const deleteButton = document.createElement("button");
+        deleteButton.textContent = "Delete";
+        deleteButton.setAttribute("aria-label", "Delete " + task.text);
+        deleteButton.className =
+          "shrink-0 rounded-md px-3 py-2 text-sm text-red-600 hover:bg-red-50";
+
+        deleteButton.addEventListener("click", () => {
+          tasks = tasks.filter(item => item.id !== task.id);
+          saveTasks();
+          renderTasks();
+        });
+
+        li.append(checkbox, taskText, deleteButton);
+        taskList.appendChild(li);
+      });
+
+      updateStats();
+
+      document.querySelectorAll(".filter").forEach(button => {
+        const active = button.dataset.filter === currentFilter;
+
+        button.className = active
+          ? "filter rounded-lg bg-indigo-600 px-4 py-2 text-sm text-white"
+          : "filter rounded-lg bg-slate-100 px-4 py-2 text-sm hover:bg-slate-200";
+      });
+    }
+
+    form.addEventListener("submit", event => {
+      event.preventDefault();
+
+      const text = input.value.trim();
+      if (!text) return;
+
+      tasks.push({
+        id: crypto.randomUUID(),
+        text: text,
+        completed: false
+      });
+
+      saveTasks();
+      input.value = "";
+      currentFilter = "all";
+      renderTasks();
+      input.focus();
+    });
+
+    document.querySelectorAll(".filter").forEach(button => {
+      button.addEventListener("click", () => {
+        currentFilter = button.dataset.filter;
+        renderTasks();
+      });
+    });
+
+    renderTasks();
+  </script>
+
+</body>
+</html>
